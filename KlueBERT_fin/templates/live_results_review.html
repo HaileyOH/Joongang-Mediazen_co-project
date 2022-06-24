@@ -1,0 +1,16 @@
+<body>
+  <div class ='live_result_review'>
+    <ul class="review-list">
+      {% for reviews in review_predict %}
+      <p>{{reviews}}</p>
+    <span class="label_result">
+      <script>console.log('라벨 출력');</script>
+      {{review_predict[reviews]}}</br>
+    </span>
+    </br>
+    </br>
+      {% endfor %}
+    </ul>
+  </div> 
+  <img style="font-family: 'Nanum Gothic Coding', monospace; align-content: center;" src='data:image/png; base64, {{chart}}' width="500">
+</body>

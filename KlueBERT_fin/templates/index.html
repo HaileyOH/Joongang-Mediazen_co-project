@@ -1,0 +1,91 @@
+{%  extends "layout.html" %}
+
+{% block body %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gamja+Flower&family=Jua&family=Nanum+Gothic+Coding:wght@700&display=swap');
+</style>
+<!-- 
+<div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="./img/hero.jpg">
+    <form class="d-flex tm-search-form">
+        <input class="form-control tm-search-input" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success tm-search-btn" type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+</div> -->
+   
+    <div class="container">
+        <div>
+            <img class ='title-img' src='https://static.vecteezy.com/system/resources/previews/003/513/008/large_2x/coffee-background-with-realistic-cup-of-coffee-vector-photo.jpg'>
+        </div>
+    </br>
+            <h2 class="pjt-title">카페리뷰를 활용한 키워드 추천</h2>
+    </br>
+        <!-- <h2 style="color: cadetblue; text-align: center;">CAFE REVIEW CLASSIFICATION</h2> -->
+        <div class="review_crawl">
+	        <h4 class = 'sub-title'>
+                 리뷰 검색
+            </h4>
+                
+                <select class='select-box' name="sel1" id="sel1">
+                </select>
+                
+                <select class='select-box' name="sel2" id="sel2">
+                </select>
+            
+                <select class='select-box' name="sel3" id="sel3">
+                </select>
+            
+                <!-- <button id="getregion" class="btn btn-primary">key출력</button> -->
+                <button id="getreview" class="btn btn-primary">검색
+                    <!-- <i class="fas fa-search"> -->
+                        <!-- ::before -->
+                    <!-- </i> -->
+                </button>
+        
+            <!-- <div class="squad-results">
+                <div>
+                크롤링 값출력 : 
+                <span id = "crawl_key"></span>
+                </div>
+            </div> -->
+        
+            <div class="squad-results">
+                <div style="margin: 0; min-height: 600;">
+                        <!-- <span style="margin: 0; min-height: 600;"></span> -->
+                    <!-- 크롤링 결과 출력 :  -->
+                    <!-- </br> -->
+                    <span id = crawl_result ></span>
+                    <!-- <textarea id = crawl_result ></textarea> -->
+                </div>
+            </div>
+        </div>
+
+	</br>
+	</br>
+        <div class="intro">
+	        <h4 class = 'sub-title'>
+                키워드 추천
+            </h4>
+            <p style="font-size: 11pt; margin-bottom: 5px;">
+                리뷰를 입력하면 리뷰에 맞는 키워드를 추천해드려요!
+            </p>
+        </div>
+        <div id="store-context" class="context">
+            <div class="wrapper">
+                <div>
+                    <!-- <h4 class="h4-txt">텍스트</h4> -->
+                    <textarea id=text-data placeholder="리뷰를 입력해주세요."></textarea>
+                </div>
+            </div>
+            <button id="process" class="btn btn-primary">제출</button>
+        </div>
+        <div class="squad-results">
+            <div class = 'margin-space'>
+                <span id="result"></span>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
